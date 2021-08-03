@@ -2,13 +2,10 @@ package controller
 
 import (
 	"backend_go/api/middlewares"
-	// "github.com/gin-gonic/gin"
 )
 
 func (s *Server) initializeRouter() {
 
-	// router := gin.Default()
-	// router.GET("/", s.Home)
 	//Home Router
 	s.Router.HandleFunc("/", middlewares.SetMiddlewareJSON(s.Home)).Methods("GET")
 
